@@ -7,7 +7,7 @@ pipeline
       {
         steps {
 
-          branch: 'master','https://github.com/Raghav123-ui/maven-project.git'
+          git branch: 'master','https://github.com/Raghav123-ui/maven-project.git'
                }
        }
       }
