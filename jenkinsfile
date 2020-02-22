@@ -10,5 +10,11 @@ pipeline
           git branch: 'master',url: 'https://github.com/Raghav123-ui/maven-project.git'
                }
        }
+       stage{
+       steps{
+       withsonarqubeenv('sonar')
+       {
+       sh 'clean mvn install sonar:sonar'
+       }}
       }
 }
