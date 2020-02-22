@@ -20,5 +20,3 @@ pipeline
        {
        sh 'clean mvn install sonar:sonar'}
        }}}}
-      
-
