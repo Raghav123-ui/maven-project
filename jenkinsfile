@@ -16,7 +16,7 @@ pipeline
        {
        withSonarQubeEnv('sonar5') {
        
-       withmaven(jdk: 'localjdk 1.8',maven: 'localmaven')
+       withmaven(jdk: 'localjdk 1.8',maven: 'localmavan')
        {
        sh 'mvn install sonar:sonar'}
        }}}}
