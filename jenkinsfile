@@ -14,7 +14,7 @@ pipeline
        {
        steps
        {
-       withSonarQubeEnv('s1') {
+       withSonarQubeEnv('sonar5') {
        
        withmaven(jdk: 'localjdk 1.8',maven: 'localmaven')
        {
