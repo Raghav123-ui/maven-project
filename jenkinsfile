@@ -13,8 +13,10 @@ pipeline
        stage{
        steps{
        withsonarqubeenv('sonar')
+       }
+       }
        {
-       sh 'clean mvn install sonar:sonar'
+       sh 'clean mvn install sonar:sonar'{
        }}
       }
 }
