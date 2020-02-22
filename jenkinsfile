@@ -14,10 +14,10 @@ pipeline
        {
        steps
        {
-       withSonarQubeEnv(credentialsId: 's1') {
+       withSonarQubeEnv('s1') {
        
        withmaven(jdk: 'localjdk 1.8',maven: 'localmaven')
        {
-       sh 'clean mvn install sonar:sonar'}
+       sh 'mvn install sonar:sonar'}
        }}}}
 }
