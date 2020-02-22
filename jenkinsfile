@@ -10,15 +10,14 @@ pipeline
           git branch: 'master',url: 'https://github.com/Raghav123-ui/maven-project.git'
                }
        }
-       stage('sonar install')
+       stage('deploy tomcat')
        {
        steps
        {
-       withSonarQubeEnv('sonar5') {
+       sshagent(['36c73152-b372-43ae-abbb-20bf2ef0a392']) {
        
-       withmaven(jdk: 'localjdk 1.8',maven: 'localmavan')
-       {
-       sh 'mvn install sonar:sonar'}
+       sh 'scp -o stricthostkeychecking=no */target/*.war ec2-user@3.136.83.79:8080:/vr/lib/tomcat/webapps
+       }
        }}}}
 }
 
