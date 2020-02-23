@@ -11,7 +11,7 @@ pipeline
                }
                }
        parallel createpackage {
-       stage(maven package goal'){
+       stage('maven package goal'){
        sh 'mvn package'
        }
        },installm2repo {
