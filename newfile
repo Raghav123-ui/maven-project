@@ -10,15 +10,15 @@ pipeline
           git branch: 'master',url: 'https://github.com/Raghav123-ui/maven-project.git'
                }
                }
-       parallel createpackage:{
+       parallel createpackage {
        stage(maven package goal'){
        sh 'mvn package'
        }
-       },installm2repo: {
+       },installm2repo {
        stage('maven install goal')
        {
        sh 'mvn install'
        }
        },
-       failfast:true     
+       failfast true     
 }}
