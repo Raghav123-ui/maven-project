@@ -16,7 +16,7 @@ pipeline
        {
        sshagent(['32dba8e9-d51b-4380-8891-bbf0474e4aae']) {
        
-       sh 'scp -o stricthostkeychecking=no */target/*.war ec2-user@172.31.27.16:8080:/var/lib/tomcat/webapps/'
+       sh 'scp -o stricthostkeychecking=no /var/lib/jenkins/workspace/job/target/webapp.war ec2-user@172.31.27.16:8080:/var/lib/tomcat/webapps/'
        }}}}
 }
 
