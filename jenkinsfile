@@ -16,6 +16,6 @@ pipeline
        {
        sshagent(['deploy-dev']) {
        
-       sh 'scp -o stricthostkeychecking=no /var/lib/jenkins/workspace/sonar_cube/webapp.war ec2-user@3.135.17.162:8080:/var/lib/tomcat/webapp/'
+       sh 'scp -o stricthostkeychecking=no /var/lib/jenkins/workspace/sonar_cube/webapp.war ec2-user@3.135.17.162:8080:/var/lib/tomcat/webapps/'
        }}}}
 }
