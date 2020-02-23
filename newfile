@@ -17,14 +17,15 @@ pipeline
        stage('compile stage')
        {
        steps {
-       withmaven(maven: 'local maven'){
+       withmaven(maven: 'localmaven'){
         sh 'man compile'
      }}
      {
      stage('test'){
      steps{
-    withmaven(maven: 'local maven') {
+    withmaven(maven: 'localmaven') {
     sh 'man test'
     }}}}}
     failfast:true
+}
 }
