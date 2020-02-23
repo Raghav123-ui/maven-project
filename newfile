@@ -1,0 +1,30 @@
+pipeline
+{
+   agent any
+   stages
+    {
+     stage('scm checkout')
+      {
+        steps {
+
+          git branch: 'master',url: 'https://github.com/Raghav123-ui/maven-project.git'
+               }
+       }
+       stage('parallel stage')
+       parallel{
+       steps
+       {
+       stage('compile stage')
+       {
+       steps {
+       withmaven(maven: 'local maven'){
+        sh 'man compile'
+     }}
+     {
+     stage('test'){
+     steps{
+    withmaven(maven: 'local maven') {
+    sh 'man test'
+    }}}}}
+    failfast:true
+}
