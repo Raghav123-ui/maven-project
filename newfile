@@ -25,7 +25,6 @@ pipeline
      steps{
     withmaven(maven: 'localmaven') {
     sh 'man test'
-    }}}}}
+    }}}}}}}
     failfast:true
-}
 }
